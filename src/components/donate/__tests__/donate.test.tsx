@@ -3,8 +3,8 @@ import userEvent from "@testing-library/user-event";
 import { BrowserRouter } from "react-router-dom";
 import renderer from "react-test-renderer";
 
-import Donate from "../Donate";
 import DonateCard from "../DonateCard";
+import Donate from "../Organizations";
 
 test("should render donate component", () => {
   render(<Donate />);
