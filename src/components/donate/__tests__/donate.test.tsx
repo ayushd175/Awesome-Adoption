@@ -4,10 +4,12 @@ import { BrowserRouter } from "react-router-dom";
 import renderer from "react-test-renderer";
 
 import DonateCard from "../DonateCard";
-import Donate from "../Organizations";
+import Organizations from "../Organizations";
+
+// import Donate from "../Organizations";
 
 test("should render donate component", () => {
-  render(<Donate />);
+  render(<Organizations />);
   const donateElement = screen.getByTestId("donate-test-title");
   expect(donateElement).toBeInTheDocument();
 
@@ -34,7 +36,7 @@ test("matches donate card snapshot", () => {
 });
 
 test("Test for filtering", async () => {
-  render(<Donate />);
+  render(<Organizations />);
   const user = userEvent.setup();
   const locationDropdown = screen.getByLabelText(/Filter by place:/i);
   await user.selectOptions(locationDropdown, "united states");

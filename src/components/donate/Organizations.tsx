@@ -15,7 +15,7 @@ export type CharityType = {
   mission: string;
 };
 
-const Donate = () => {
+const Organizations = () => {
   const [location, setLocation] = useState("All");
   const [charityFiltered, setCharityFiltered] =
     useState<CharityType[]>(charity);
@@ -98,4 +98,4 @@ const Donate = () => {
     </Container>
   );
 };
-export default Donate;
+export default Organizations;
